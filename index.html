@@ -10,9 +10,26 @@ table{
        font-size: 1.6em;
        text-shadow: 3px 2px 1px white;
        }
+ p {font-size: 50px;
+     font-family: 'VT323', monospace;
+     }
+     a {text-decoration: none;}
+     a:link {color: red;}
+     a:visited {color: green;}
+     a:hover {color: hotpink;}
+     a:active {color: blue;}
+     #id-elemen-yang-ingin-di-print {font-family: 'VT323', monospace;}
+     @font-face {
+     font-family: "VT323";
+     src: url('VT323-Regular.ttf');
+     }
+     .digital {
+     font-family: "VT323";
+     }
 </style>
 </head>
 <body>
+<div id="id-elemen-yang-ingin-di-print">
 <div class="header" style="text-align: center;">
 <h1>Jadwal Pelajaran Kelas 8A<br><br>
 レッスンのスケジュール  クラス 8A
@@ -109,5 +126,19 @@ Hari
 <h2>SMPN 1 Kalijati - Tahun 2022/2023</h2>
 <img src="girl.webp" height="50%">
 </div>
+</div>
+<textarea id="printing-css" style="display:none;">.no-print{display:none}</textarea>
+<iframe id="printing-frame" name="print_frame" src="#" style="display:none;"></iframe>
+<script type="text/javascript">
+function printDiv(elementId) {
+ var a = document.getElementById('printing-css').value;
+ var b = document.getElementById(elementId).innerHTML;
+ window.frames["print_frame"].document.title = document.title;
+ window.frames["print_frame"].document.body.innerHTML = '<style>' + a + '</style>' + b;
+ window.frames["print_frame"].window.focus();
+ window.frames["print_frame"].window.print();
+}
+</script>
+<a href="javascript:printDiv('id-elemen-yang-ingin-di-print');">Print</a>
 </body>
 </html>
