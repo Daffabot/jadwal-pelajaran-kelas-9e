@@ -7,10 +7,10 @@
 <style type="text/css">
 table{
        color: red;
-       font-size: 1.6em;
+       font-size: 3em;
        text-shadow: 3px 2px 1px white;
        }
- p {font-size: 50px;
+ font{font-size: 50px;
      font-family: 'VT323', monospace;
      }
      a {text-decoration: none;}
@@ -30,7 +30,7 @@ table{
 </head>
 <body>
 <div id="id-elemen-yang-ingin-di-print">
-<div class="header" style="text-align: center;">
+<div class="header" style="text-align: center; font-size: 20px">
 <h1>Jadwal Pelajaran Kelas 8A<br><br>
 レッスンのスケジュール  クラス 8A
 </h1>
@@ -139,6 +139,6 @@ function printDiv(elementId) {
  window.frames["print_frame"].window.print();
 }
 </script>
-<a href="javascript:printDiv('id-elemen-yang-ingin-di-print');">Print</a>
+<a href="javascript:printDiv('id-elemen-yang-ingin-di-print');"><font size="4" align="center">Print</font></a>
 </body>
 </html>
