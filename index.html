@@ -4,6 +4,11 @@
 <meta name=”viewport” content=”width=device-width, initial-scale=1.0, maximum-scale=1.0”>
 <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″ />
 <title>Jadwal Pelajaran Kelas 8A</title>
+<script type="text/javascript">
+window.onload=function(){
+document.getElementById('fireit()').play();
+}
+</script>
 <style type="text/css">
 table{
        color: red;
@@ -31,6 +36,7 @@ table{
 </head>
 <body>
 <div id="id-elemen-yang-ingin-di-print">
+<p id="load"></p>
 <form name="fire">
 <audio id="fireit()" src="bgSong.mp3" preload="auto"></audio>
 <a href="javascript:play_single_sound();">
@@ -39,7 +45,7 @@ table{
 </form>
 
 <script type="text/javascript">
-window.onload=fireit(){
+function fireit(){
 document.getElementById('fireit()').play();
 }
 </script>
