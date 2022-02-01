@@ -22,7 +22,7 @@ table{
      .btn{
          border-radius: 12px;
          background-color: #252428;
-         color: white;
+         color: red;
          padding: 25px 20px;
          font-size: 50px;
          text-align: center;
@@ -40,6 +40,17 @@ table{
      .digital {
      font-family: "VT323";
      }
+     .btn{padding:2px 15px;border-radius:10px;color:red;font-size:13px;background:black;line-height:25px}
+        .btn:hover{background:#333!important;color:#FF0000!important}
+        .btn.disabled{background:#222;color:#555}
+        .btn.disabled:hover{background:#222!important;color:#555!important;cursor:default}
+        .btn.disabled{cursor:default;color:#555}
+        .btn:hover{background:none!important}
+        .btn{margin-left:5px}
+        .btn[rel=btn]{margin-left:10px}
+        .btn button{background:0;font-size:19px;padding:0;color:#ccc}
+        .btn .fas{line-height:29px}
+        .btn[rel=btn]{margin-right:10px}
 </style>
 </head>
 <body>
@@ -179,7 +190,7 @@ function printDiv(elementId) {
 <form name="fire" align="center">
 <audio id="fireit()" src="bgSong.mp3" preload="auto"></audio>
 <a href="javascript:play_single_sound();">
-<input class="btn" name="message" type="button" style="font-family: 'VT323', monospace;" value="Play Song" onClick="fireit()"></a>
+<input class="btn" rel="btn" name="message" type="button" style="font-family: 'VT323', monospace;" value="Play Song" onClick="fireit()"></a>
 
 </form>
 
